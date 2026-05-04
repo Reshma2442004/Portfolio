@@ -272,16 +272,21 @@ section {
 
 .about-content {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
-    align-items: center;
+    grid-template-columns: 350px 1fr;
+    gap: 5rem;
+    align-items: start;
     margin-bottom: 4rem;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .about-image {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
+    min-height: 400px;
 }
 
 .about-img-container {
@@ -289,8 +294,8 @@ section {
 }
 
 .about-img {
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     border-radius: 50%;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     padding: 6px;
@@ -311,10 +316,10 @@ section {
 
 .img-decoration {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    width: 340px;
-    height: 340px;
+    top: -15px;
+    left: -15px;
+    width: 310px;
+    height: 310px;
     border-radius: 50%;
     border: 3px solid #6c5ce7;
     z-index: 1;
@@ -322,57 +327,129 @@ section {
 
 .about-text {
     text-align: left;
+    padding-top: 1rem;
 }
 
 .about-text h3 {
-    font-size: 2rem;
+    font-size: 2.2rem;
     color: #333;
     margin-bottom: 1.5rem;
     font-weight: 600;
+    line-height: 1.3;
 }
 
 .about-text p {
     font-size: 1.1rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     color: #666;
     line-height: 1.8;
+    text-align: justify;
+}
+
+/* Career Objective Section */
+.objective {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 0;
+}
+
+.objective .section-title {
+    color: white;
+}
+
+.objective .section-title::after {
+    background: #ffd700;
+}
+
+.objective-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.objective-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.objective-card i {
+    font-size: 3rem;
+    color: #ffd700;
+    margin-bottom: 2rem;
+    display: block;
+}
+
+.objective-card p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #f0f0f0;
+    font-weight: 400;
+}
+
+.career-objective {
+    background: rgba(108, 92, 231, 0.05);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #6c5ce7;
+}
+
+.career-objective h4 {
+    color: #6c5ce7;
+    font-size: 1.2rem;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.career-objective p {
+    color: #555;
+    font-style: italic;
+    line-height: 1.6;
 }
 
 .about-highlights {
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .highlight-item {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
-    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    padding: 1rem;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 4px solid #6c5ce7;
 }
 
 .highlight-item:hover {
-    transform: translateX(10px);
+    transform: translateX(8px);
+    box-shadow: 0 8px 25px rgba(108, 92, 231, 0.15);
 }
 
 .highlight-item i {
-    width: 40px;
-    height: 40px;
-    background: #6c5ce7;
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #6c5ce7, #764ba2);
     color: white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.2rem;
+    flex-shrink: 0;
 }
 
 .highlight-item span {
     color: #333;
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .stats {
@@ -382,23 +459,28 @@ section {
     background: white;
     padding: 3rem 2rem;
     border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    margin-top: 3rem;
 }
 
 .stat {
     text-align: center;
+    padding: 1rem;
 }
 
 .stat h3 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 700;
     color: #6c5ce7;
     margin-bottom: 0.5rem;
+    line-height: 1;
 }
 
 .stat p {
     color: #666;
     font-weight: 500;
+    font-size: 0.95rem;
+    margin: 0;
 }
 
 /* Education Section */
@@ -476,9 +558,26 @@ section {
     font-weight: 500;
 }
 
+.grade {
+    background: #6c5ce7;
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin: 0.5rem 0;
+    font-weight: 500;
+}
+
 /* Experience Section */
 .experience {
     background: #f8f9fa;
+}
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
 }
 
 .experience-card {
@@ -798,7 +897,7 @@ section {
     
     .about-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
         text-align: center;
     }
     
@@ -806,14 +905,20 @@ section {
         text-align: center;
     }
     
+    .about-text p {
+        text-align: left;
+    }
+    
     .about-img {
-        width: 220px;
-        height: 220px;
+        width: 250px;
+        height: 250px;
     }
     
     .img-decoration {
-        width: 220px;
-        height: 220px;
+        width: 280px;
+        height: 280px;
+        top: -12px;
+        left: -12px;
     }
     
     .timeline::before {
